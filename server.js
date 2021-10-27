@@ -44,8 +44,7 @@ const EnemySchema = new mongoose.Schema({
     name: String,
     health: Number,
     damage: Number,
-    id: Number, 
-    speed: Number
+    armor: Number
 })
 
 
@@ -86,7 +85,6 @@ app.post('/enemy', async (req, res) => {
         alert("It broke. What on Earth did you do...?")
     }
 })
-
 
 ///////////////////////////////
 // LISTENER
