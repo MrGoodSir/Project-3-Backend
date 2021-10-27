@@ -68,6 +68,25 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
+// Enemy Index Route
+app.get('/enemy', async (req, res) => {
+    try {
+        res.json(await People.find({}))
+    } catch (error) {
+        alert("Man, you really jacked something up...")
+    }
+})
+
+
+// Enemy Create Route
+app.post('/enemy', async (req, res) => {
+    try{
+        res.json(await Enemy.create(req.body));
+    } catch (error) {
+        alert("It broke. What on Earth did you do...?")
+    }
+})
+
 
 ///////////////////////////////
 // LISTENER
