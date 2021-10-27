@@ -54,7 +54,9 @@ const EnemySchema = new mongoose.Schema({
 ///////////////////////////////
 
 
-
+app.use(cors()); // to prevent cors errors, open acces to all origins
+app.use(morgan('dev')); // logging
+app.use(express.json()); // parse json bodies
 
 
 ///////////////////////////////
