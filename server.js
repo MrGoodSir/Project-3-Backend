@@ -16,6 +16,10 @@ const mongoose = require('mongoose')
 // Create application object
 const app = express();
 
+// Import Middleware
+const cors = require('cors');
+const morgan = require('morgan')
+
 
 ///////////////////////////////
 // DATABASE CONNECTION
@@ -29,6 +33,28 @@ mongoose.connection
     .on('open', () => console.log("Connected to MongoDB"))
     .on('close', () => console.log("Couldn't connect to MongoDB"))
     .on('error', () => console.log(error));
+
+
+///////////////////////////////
+// MODELS
+///////////////////////////////
+
+
+const EnemySchema = new mongoose.Schema({
+    name: String,
+    health: Number,
+    damage: Number,
+    id: Number, 
+    speed: Number
+})
+
+
+///////////////////////////////
+// MIDDLEWARE
+///////////////////////////////
+
+
+
 
 
 ///////////////////////////////
