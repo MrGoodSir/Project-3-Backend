@@ -44,7 +44,8 @@ const EnemySchema = new mongoose.Schema({
     name: String,
     health: Number,
     damage: Number,
-    armor: Number
+    armor: Number,
+    image: String,
 })
 
 
