@@ -49,6 +49,21 @@ const EnemySchema = new mongoose.Schema({
 })
 
 
+const HumanSchema = new mongoose.Schema({
+    name: String,
+    health: Number,
+    damage: Number,
+    image: String,
+})
+
+const AnimalSchema = new mongoose.Schema({
+    name: String,
+    health: Number,
+    behavior: String,
+    image: String,
+})
+
+
 ///////////////////////////////
 // MIDDLEWARE
 ///////////////////////////////
