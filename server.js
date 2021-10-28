@@ -30,7 +30,7 @@ mongoose.connection
 ///////////////////////////////
 
 
-const EnemySchema = new mongoose.Schema({
+const MobSchema = new mongoose.Schema({
     name: String,
     health: Number,
     damage: Number,
@@ -58,29 +58,29 @@ app.get('/', (req, res) => {
     res.send('This is the start page')
 })
 
-// Enemy Seed Route
+// Mob Seed Route
 app.get('/seed', (req, res) => {
-    Enemy.deleteMany({}, (error, allEnemies) => {})
+    Mob.deleteMany({}, (error, allMobs) => {})
 
-    Enemy.create(enemySeed, (error, data) => {
+    Mob.create(mobSeed, (error, data) => {
         res.redirect('/home')
     })
 })
 
-// Enemy Index Route
+// Mob Index Route
 app.get('/home', async (req, res) => {
     try {
-        res.json(await Enemy.find({}))
+        res.json(await Mob.find({}))
     } catch (error) {
         alert("Man, you really jacked something up...")
     }
 })
 
 
-// Enemy Create Route
+// Mob Create Route
 app.post('/home', async (req, res) => {
     try{
-        res.json(await Enemy.create(req.body));
+        res.json(await Mob.create(req.body));
     } catch (error) {
         alert("It broke. What on Earth did you do...?")
     }
