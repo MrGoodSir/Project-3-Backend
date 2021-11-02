@@ -113,10 +113,6 @@ app.put('/mobs/:id', async (req, res) => {
     }
 })
 
-app.get('/', (req, res) => {
-    res.send('hello world');
-  });
-
 ///////////////////////////////
 // LISTENER
 ///////////////////////////////
