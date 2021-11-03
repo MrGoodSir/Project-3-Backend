@@ -92,14 +92,14 @@ app.post('/mobs', async (req, res) => {
 })
 
 // Mob Delete Route
-app.delete('/mobs/', async (req, res) => {
-    try{ 
-        res.json(await Mobs.findByIdAndDelete(req.params.id));
-    } catch (error) {
+// app.delete('/mobs/:id', async (req, res) => {
+//     try{ 
+//         res.json(await Mobs.findByIdAndDelete(req.params.id));
+//     } catch (error) {
 
-        res.status(400).json(error);
-    }
-})
+//         res.status(400).json(error);
+//     }
+// })
 
 // Mob Update Route
 app.put('/mobs/:id', async (req, res) => {
