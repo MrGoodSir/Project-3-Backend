@@ -32,7 +32,7 @@ module.exports =[
         health: 20,
         damage: 4,
         armor: 0,
-        image: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7a/Lefthandedskeleton.png/revision/latest/scale-to-width-down/166?cb=20210301080603",
+        image: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/minecraft/b/b6/118px-Skeleton.png?width=500",
     },
     {
         name: "Enderman",

@@ -92,7 +92,7 @@ app.post('/mobs', async (req, res) => {
 })
 
 // Mob Delete Route
-app.delete('/mobs/:id', async (req, res) => {
+app.delete('/mobs/', async (req, res) => {
     try{ 
         res.json(await Mobs.findByIdAndDelete(req.params.id));
     } catch (error) {
