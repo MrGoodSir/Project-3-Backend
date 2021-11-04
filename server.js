@@ -83,7 +83,7 @@ app.get('/mobs', async (req, res) => {
 
 // Mob Create Route
 app.post('/mobs', async (req, res) => {
-    try{
+    try {
         res.json(await Mobs.create(req.body));
     } catch (error) {
 
